@@ -1,15 +1,13 @@
 import 'reflect-metadata';
 import express, { Application, Request, Response } from 'express';
 import { AppDataSource } from './config/database/data-source';
+import flightsRouter from './route/flight.route';
 
 const app: Application = express();
 const port: number = parseInt(process.env.PORT || '3000');
 
 app.use(express.json());
-
-app.get('/', (req: Request, res: Response) => {
-  res.send('Hello, World!');
-});
+app.use('/', flightsRouter)
 
 AppDataSource.initialize()
   .then(() => {
