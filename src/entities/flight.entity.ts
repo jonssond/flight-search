@@ -23,7 +23,6 @@ export class Flight {
     @Column({ type: 'timestamptz'})
     arrival!: Date;
 
-    @Column({ type: 'double'})
+    @Column({ type: 'double precision'})
     price!: number;
-
 }
