@@ -1,16 +1,11 @@
-import { FlightRepository } from "../repository/flight.repository";
 import { Flight } from "../entity/flight.entity"; // Adjust the path as needed
 import { AppDataSource } from "../config/database/data-source"; // Adjust the path as needed
 
 export class FlightService {
-    private flightRepository: FlightRepository;
-
-    constructor() {
-        this.flightRepository = new FlightRepository(Flight, AppDataSource.manager);
-    }
+    private flightRepository = AppDataSource.getRepository(Flight);
 
     async getAll(): Promise<Flight[]> {
-        const flightsList: Flight[] = await this.flightRepository.getAll();
+        const flightsList: Flight[] = await this.flightRepository.find();
         return flightsList;
     }
 }
