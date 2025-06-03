@@ -5,6 +5,6 @@ export class FlightService {
     private flightRepository = AppDataSource.getRepository(Flight);
 
     async getAll(): Promise<Flight[]> {
-        return await this.flightRepository.find();
+        return this.flightRepository.find();
     }
 }
