@@ -7,7 +7,7 @@ const app: Application = express();
 const port: number = parseInt(process.env.PORT || '3000');
 
 app.use(express.json());
-app.use('/', flightsRouter)
+app.use('/', flightsRouter);
 
 AppDataSource.initialize()
   .then(() => {
