@@ -10,9 +10,12 @@ app.use(express.json());
 app.use('/', flightsRouter);
 
 AppDataSource.initialize()
-  .then(() => {
+  .then(async () => {
     console.log('Data Source has been initialized!');
-
+    
+    console.log('Running pending migrations...');
+    await AppDataSource.runMigrations();
+    console.log('Migrations have been successfully run.');
     app.listen(port, () => {
       console.log(`Server is running on http://localhost:${port}`);
     });
