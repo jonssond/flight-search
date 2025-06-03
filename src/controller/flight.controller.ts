@@ -13,7 +13,8 @@ export class FlightController {
             const flights = await this.flightService.getAll();
             res.status(200).json(flights);
         } catch(error) {
-            res.status(500).json({ message: 'Error fetching flights', error });
+            console.error('Error fetching flights:', error);
+            res.status(500).json({ message: 'An unexpected error occurred while fetching flights.' });
         }
     }
 } 
