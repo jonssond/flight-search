@@ -22,7 +22,7 @@ async function seedDatabase() {
     const flightRepository = AppDataSource.getRepository(Flight);
 
     console.log('Clearing existing flight data...');
-    await flightRepository.query('DELETE FROM tb_flights;');
+    await flightRepository.clear();
     console.log('Existing flight data cleared.');
 
     const flightsToSeed: Partial<Flight>[] = (flightSeedDataArray as FlightSeedEntry[]).map(seed => ({
