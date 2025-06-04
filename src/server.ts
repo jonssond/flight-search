@@ -2,11 +2,13 @@ import 'reflect-metadata';
 import express, { Application, Request, Response } from 'express';
 import { AppDataSource } from './config/database/data-source';
 import flightsRouter from './route/flight.route';
+import cors from 'cors';
 
 const app: Application = express();
 const port: number = parseInt(process.env.PORT || '3000');
 
 app.use(express.json());
+app.use(cors());
 app.use('/', flightsRouter);
 
 AppDataSource.initialize()
