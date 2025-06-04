@@ -1,0 +1,1002 @@
+[
+  {
+    "id": "1",
+    "flightNumber": "DE766",
+    "airline": "Delta Air Lines",
+    "origin": "AMS",
+    "destination": "SEA",
+    "departure": "2025-06-18T05:00:00Z",
+    "arrival": "2025-06-18T11:00:00Z",
+    "price": 638.76
+  },
+  {
+    "id": "2",
+    "flightNumber": "LU642",
+    "airline": "Lufthansa",
+    "origin": "ATL",
+    "destination": "SYD",
+    "departure": "2025-06-15T18:00:00Z",
+    "arrival": "2025-06-16T05:00:00Z",
+    "price": 598.37
+  },
+  {
+    "id": "3",
+    "flightNumber": "AI182",
+    "airline": "Air France",
+    "origin": "LAX",
+    "destination": "SYD",
+    "departure": "2025-06-15T13:00:00Z",
+    "arrival": "2025-06-15T14:00:00Z",
+    "price": 244.9
+  },
+  {
+    "id": "4",
+    "flightNumber": "QA559",
+    "airline": "Qantas",
+    "origin": "LAX",
+    "destination": "JFK",
+    "departure": "2025-06-17T01:00:00Z",
+    "arrival": "2025-06-17T10:00:00Z",
+    "price": 577.5
+  },
+  {
+    "id": "5",
+    "flightNumber": "UN949",
+    "airline": "United Airlines",
+    "origin": "SEA",
+    "destination": "MAD",
+    "departure": "2025-06-15T16:00:00Z",
+    "arrival": "2025-06-16T04:00:00Z",
+    "price": 590.83
+  },
+  {
+    "id": "6",
+    "flightNumber": "AM823",
+    "airline": "American Airlines",
+    "origin": "MEL",
+    "destination": "ATL",
+    "departure": "2025-06-10T10:00:00Z",
+    "arrival": "2025-06-10T18:00:00Z",
+    "price": 436.51
+  },
+  {
+    "id": "7",
+    "flightNumber": "BR661",
+    "airline": "British Airways",
+    "origin": "DXB",
+    "destination": "CDG",
+    "departure": "2025-06-16T23:00:00Z",
+    "arrival": "2025-06-17T05:00:00Z",
+    "price": 449.22
+  },
+  {
+    "id": "8",
+    "flightNumber": "AI256",
+    "airline": "Air France",
+    "origin": "SFO",
+    "destination": "AMS",
+    "departure": "2025-06-12T10:00:00Z",
+    "arrival": "2025-06-12T12:00:00Z",
+    "price": 576.91
+  },
+  {
+    "id": "9",
+    "flightNumber": "SO436",
+    "airline": "Southwest Airlines",
+    "origin": "MAD",
+    "destination": "JFK",
+    "departure": "2025-06-11T02:00:00Z",
+    "arrival": "2025-06-11T05:00:00Z",
+    "price": 108.09
+  },
+  {
+    "id": "10",
+    "flightNumber": "DE341",
+    "airline": "Delta Air Lines",
+    "origin": "ORD",
+    "destination": "CDG",
+    "departure": "2025-06-12T06:00:00Z",
+    "arrival": "2025-06-12T12:00:00Z",
+    "price": 682.71
+  },
+  {
+    "id": "11",
+    "flightNumber": "DE605",
+    "airline": "Delta Air Lines",
+    "origin": "MEL",
+    "destination": "LHR",
+    "departure": "2025-06-12T09:00:00Z",
+    "arrival": "2025-06-12T10:00:00Z",
+    "price": 207.26
+  },
+  {
+    "id": "12",
+    "flightNumber": "KL608",
+    "airline": "KLM",
+    "origin": "JFK",
+    "destination": "LAX",
+    "departure": "2025-06-17T11:00:00Z",
+    "arrival": "2025-06-17T12:00:00Z",
+    "price": 520.05
+  },
+  {
+    "id": "13",
+    "flightNumber": "AM762",
+    "airline": "American Airlines",
+    "origin": "JFK",
+    "destination": "DXB",
+    "departure": "2025-06-12T14:00:00Z",
+    "arrival": "2025-06-12T20:00:00Z",
+    "price": 600.68
+  },
+  {
+    "id": "14",
+    "flightNumber": "BR992",
+    "airline": "British Airways",
+    "origin": "ATL",
+    "destination": "MEL",
+    "departure": "2025-06-10T11:00:00Z",
+    "arrival": "2025-06-10T12:00:00Z",
+    "price": 517.75
+  },
+  {
+    "id": "15",
+    "flightNumber": "SO784",
+    "airline": "Southwest Airlines",
+    "origin": "MAD",
+    "destination": "FRA",
+    "departure": "2025-06-14T13:00:00Z",
+    "arrival": "2025-06-14T23:00:00Z",
+    "price": 470.96
+  },
+  {
+    "id": "16",
+    "flightNumber": "SO205",
+    "airline": "Southwest Airlines",
+    "origin": "SEA",
+    "destination": "FRA",
+    "departure": "2025-06-18T07:00:00Z",
+    "arrival": "2025-06-18T19:00:00Z",
+    "price": 208.38
+  },
+  {
+    "id": "17",
+    "flightNumber": "QA786",
+    "airline": "Qantas",
+    "origin": "ORD",
+    "destination": "SFO",
+    "departure": "2025-06-14T19:00:00Z",
+    "arrival": "2025-06-15T03:00:00Z",
+    "price": 429.41
+  },
+  {
+    "id": "18",
+    "flightNumber": "AI224",
+    "airline": "Air France",
+    "origin": "SEA",
+    "destination": "MEL",
+    "departure": "2025-06-17T21:00:00Z",
+    "arrival": "2025-06-18T08:00:00Z",
+    "price": 340.57
+  },
+  {
+    "id": "19",
+    "flightNumber": "LU645",
+    "airline": "Lufthansa",
+    "origin": "ATL",
+    "destination": "LHR",
+    "departure": "2025-06-11T20:00:00Z",
+    "arrival": "2025-06-11T21:00:00Z",
+    "price": 622.47
+  },
+  {
+    "id": "20",
+    "flightNumber": "DE520",
+    "airline": "Delta Air Lines",
+    "origin": "LAX",
+    "destination": "DXB",
+    "departure": "2025-06-15T07:00:00Z",
+    "arrival": "2025-06-15T19:00:00Z",
+    "price": 525.51
+  },
+  {
+    "id": "21",
+    "flightNumber": "SO186",
+    "airline": "Southwest Airlines",
+    "origin": "ATL",
+    "destination": "LAS",
+    "departure": "2025-06-10T11:00:00Z",
+    "arrival": "2025-06-10T13:00:00Z",
+    "price": 466.0
+  },
+  {
+    "id": "22",
+    "flightNumber": "UN773",
+    "airline": "United Airlines",
+    "origin": "LAX",
+    "destination": "MEL",
+    "departure": "2025-06-12T21:00:00Z",
+    "arrival": "2025-06-13T08:00:00Z",
+    "price": 265.95
+  },
+  {
+    "id": "23",
+    "flightNumber": "LU688",
+    "airline": "Lufthansa",
+    "origin": "DXB",
+    "destination": "SFO",
+    "departure": "2025-06-14T16:00:00Z",
+    "arrival": "2025-06-15T04:00:00Z",
+    "price": 405.71
+  },
+  {
+    "id": "24",
+    "flightNumber": "DE396",
+    "airline": "Delta Air Lines",
+    "origin": "AMS",
+    "destination": "DXB",
+    "departure": "2025-06-15T19:00:00Z",
+    "arrival": "2025-06-15T20:00:00Z",
+    "price": 399.79
+  },
+  {
+    "id": "25",
+    "flightNumber": "QA310",
+    "airline": "Qantas",
+    "origin": "MEL",
+    "destination": "LHR",
+    "departure": "2025-06-12T11:00:00Z",
+    "arrival": "2025-06-12T22:00:00Z",
+    "price": 220.07
+  },
+  {
+    "id": "26",
+    "flightNumber": "KL351",
+    "airline": "KLM",
+    "origin": "SEA",
+    "destination": "LHR",
+    "departure": "2025-06-10T17:00:00Z",
+    "arrival": "2025-06-11T05:00:00Z",
+    "price": 337.19
+  },
+  {
+    "id": "27",
+    "flightNumber": "UN829",
+    "airline": "United Airlines",
+    "origin": "FRA",
+    "destination": "MAD",
+    "departure": "2025-06-19T04:00:00Z",
+    "arrival": "2025-06-19T09:00:00Z",
+    "price": 555.8
+  },
+  {
+    "id": "28",
+    "flightNumber": "QA396",
+    "airline": "Qantas",
+    "origin": "MAD",
+    "destination": "ORD",
+    "departure": "2025-06-12T14:00:00Z",
+    "arrival": "2025-06-13T01:00:00Z",
+    "price": 163.38
+  },
+  {
+    "id": "29",
+    "flightNumber": "DE173",
+    "airline": "Delta Air Lines",
+    "origin": "LAS",
+    "destination": "SFO",
+    "departure": "2025-06-18T02:00:00Z",
+    "arrival": "2025-06-18T03:00:00Z",
+    "price": 327.3
+  },
+  {
+    "id": "30",
+    "flightNumber": "SO884",
+    "airline": "Southwest Airlines",
+    "origin": "JFK",
+    "destination": "AMS",
+    "departure": "2025-06-15T03:00:00Z",
+    "arrival": "2025-06-15T05:00:00Z",
+    "price": 600.41
+  },
+  {
+    "id": "31",
+    "flightNumber": "UN409",
+    "airline": "United Airlines",
+    "origin": "MAD",
+    "destination": "SFO",
+    "departure": "2025-06-13T14:00:00Z",
+    "arrival": "2025-06-13T16:00:00Z",
+    "price": 268.49
+  },
+  {
+    "id": "32",
+    "flightNumber": "AM315",
+    "airline": "American Airlines",
+    "origin": "SYD",
+    "destination": "AMS",
+    "departure": "2025-06-10T07:00:00Z",
+    "arrival": "2025-06-10T11:00:00Z",
+    "price": 503.82
+  },
+  {
+    "id": "33",
+    "flightNumber": "SO739",
+    "airline": "Southwest Airlines",
+    "origin": "SEA",
+    "destination": "MEL",
+    "departure": "2025-06-18T11:00:00Z",
+    "arrival": "2025-06-18T15:00:00Z",
+    "price": 199.5
+  },
+  {
+    "id": "34",
+    "flightNumber": "UN688",
+    "airline": "United Airlines",
+    "origin": "SFO",
+    "destination": "JFK",
+    "departure": "2025-06-11T22:00:00Z",
+    "arrival": "2025-06-12T06:00:00Z",
+    "price": 288.12
+  },
+  {
+    "id": "35",
+    "flightNumber": "DE202",
+    "airline": "Delta Air Lines",
+    "origin": "LAS",
+    "destination": "LHR",
+    "departure": "2025-06-19T04:00:00Z",
+    "arrival": "2025-06-19T12:00:00Z",
+    "price": 588.74
+  },
+  {
+    "id": "36",
+    "flightNumber": "SO346",
+    "airline": "Southwest Airlines",
+    "origin": "SEA",
+    "destination": "JFK",
+    "departure": "2025-06-17T00:00:00Z",
+    "arrival": "2025-06-17T04:00:00Z",
+    "price": 373.31
+  },
+  {
+    "id": "37",
+    "flightNumber": "AM668",
+    "airline": "American Airlines",
+    "origin": "JFK",
+    "destination": "ATL",
+    "departure": "2025-06-10T16:00:00Z",
+    "arrival": "2025-06-10T18:00:00Z",
+    "price": 608.19
+  },
+  {
+    "id": "38",
+    "flightNumber": "AM450",
+    "airline": "American Airlines",
+    "origin": "ATL",
+    "destination": "ORD",
+    "departure": "2025-06-10T08:00:00Z",
+    "arrival": "2025-06-10T16:00:00Z",
+    "price": 201.93
+  },
+  {
+    "id": "39",
+    "flightNumber": "KL754",
+    "airline": "KLM",
+    "origin": "SEA",
+    "destination": "SFO",
+    "departure": "2025-06-15T03:00:00Z",
+    "arrival": "2025-06-15T09:00:00Z",
+    "price": 313.56
+  },
+  {
+    "id": "40",
+    "flightNumber": "UN417",
+    "airline": "United Airlines",
+    "origin": "CDG",
+    "destination": "JFK",
+    "departure": "2025-06-13T09:00:00Z",
+    "arrival": "2025-06-13T21:00:00Z",
+    "price": 253.69
+  },
+  {
+    "id": "41",
+    "flightNumber": "KL322",
+    "airline": "KLM",
+    "origin": "LHR",
+    "destination": "SYD",
+    "departure": "2025-06-12T02:00:00Z",
+    "arrival": "2025-06-12T06:00:00Z",
+    "price": 114.35
+  },
+  {
+    "id": "42",
+    "flightNumber": "QA963",
+    "airline": "Qantas",
+    "origin": "SFO",
+    "destination": "FRA",
+    "departure": "2025-06-14T19:00:00Z",
+    "arrival": "2025-06-14T20:00:00Z",
+    "price": 610.23
+  },
+  {
+    "id": "43",
+    "flightNumber": "EM677",
+    "airline": "Emirates",
+    "origin": "CDG",
+    "destination": "LAX",
+    "departure": "2025-06-19T14:00:00Z",
+    "arrival": "2025-06-19T19:00:00Z",
+    "price": 284.64
+  },
+  {
+    "id": "44",
+    "flightNumber": "LU548",
+    "airline": "Lufthansa",
+    "origin": "LAX",
+    "destination": "JFK",
+    "departure": "2025-06-16T01:00:00Z",
+    "arrival": "2025-06-16T11:00:00Z",
+    "price": 439.62
+  },
+  {
+    "id": "45",
+    "flightNumber": "BR445",
+    "airline": "British Airways",
+    "origin": "FRA",
+    "destination": "LAS",
+    "departure": "2025-06-20T04:00:00Z",
+    "arrival": "2025-06-20T05:00:00Z",
+    "price": 531.43
+  },
+  {
+    "id": "46",
+    "flightNumber": "KL932",
+    "airline": "KLM",
+    "origin": "SFO",
+    "destination": "ATL",
+    "departure": "2025-06-19T14:00:00Z",
+    "arrival": "2025-06-19T20:00:00Z",
+    "price": 90.99
+  },
+  {
+    "id": "47",
+    "flightNumber": "EM728",
+    "airline": "Emirates",
+    "origin": "LAX",
+    "destination": "SEA",
+    "departure": "2025-06-16T21:00:00Z",
+    "arrival": "2025-06-17T06:00:00Z",
+    "price": 634.54
+  },
+  {
+    "id": "48",
+    "flightNumber": "SO776",
+    "airline": "Southwest Airlines",
+    "origin": "SEA",
+    "destination": "CDG",
+    "departure": "2025-06-11T20:00:00Z",
+    "arrival": "2025-06-12T05:00:00Z",
+    "price": 249.45
+  },
+  {
+    "id": "49",
+    "flightNumber": "DE601",
+    "airline": "Delta Air Lines",
+    "origin": "LHR",
+    "destination": "LAX",
+    "departure": "2025-06-17T01:00:00Z",
+    "arrival": "2025-06-17T13:00:00Z",
+    "price": 91.03
+  },
+  {
+    "id": "50",
+    "flightNumber": "UN716",
+    "airline": "United Airlines",
+    "origin": "ATL",
+    "destination": "LAX",
+    "departure": "2025-06-15T16:00:00Z",
+    "arrival": "2025-06-15T20:00:00Z",
+    "price": 239.74
+  },
+  {
+    "id": "51",
+    "flightNumber": "BR861",
+    "airline": "British Airways",
+    "origin": "AMS",
+    "destination": "MEL",
+    "departure": "2025-06-18T20:00:00Z",
+    "arrival": "2025-06-19T00:00:00Z",
+    "price": 424.15
+  },
+  {
+    "id": "52",
+    "flightNumber": "DE177",
+    "airline": "Delta Air Lines",
+    "origin": "ORD",
+    "destination": "MAD",
+    "departure": "2025-06-12T13:00:00Z",
+    "arrival": "2025-06-12T20:00:00Z",
+    "price": 601.32
+  },
+  {
+    "id": "53",
+    "flightNumber": "LU888",
+    "airline": "Lufthansa",
+    "origin": "JFK",
+    "destination": "CDG",
+    "departure": "2025-06-20T03:00:00Z",
+    "arrival": "2025-06-20T14:00:00Z",
+    "price": 146.85
+  },
+  {
+    "id": "54",
+    "flightNumber": "DE790",
+    "airline": "Delta Air Lines",
+    "origin": "CDG",
+    "destination": "SEA",
+    "departure": "2025-06-10T19:00:00Z",
+    "arrival": "2025-06-11T02:00:00Z",
+    "price": 205.03
+  },
+  {
+    "id": "55",
+    "flightNumber": "KL570",
+    "airline": "KLM",
+    "origin": "LAX",
+    "destination": "SYD",
+    "departure": "2025-06-10T14:00:00Z",
+    "arrival": "2025-06-10T19:00:00Z",
+    "price": 289.66
+  },
+  {
+    "id": "56",
+    "flightNumber": "KL909",
+    "airline": "KLM",
+    "origin": "SYD",
+    "destination": "LAX",
+    "departure": "2025-06-12T19:00:00Z",
+    "arrival": "2025-06-13T07:00:00Z",
+    "price": 276.13
+  },
+  {
+    "id": "57",
+    "flightNumber": "UN917",
+    "airline": "United Airlines",
+    "origin": "AMS",
+    "destination": "LAX",
+    "departure": "2025-06-16T10:00:00Z",
+    "arrival": "2025-06-16T18:00:00Z",
+    "price": 434.6
+  },
+  {
+    "id": "58",
+    "flightNumber": "BR458",
+    "airline": "British Airways",
+    "origin": "MAD",
+    "destination": "ORD",
+    "departure": "2025-06-10T16:00:00Z",
+    "arrival": "2025-06-10T19:00:00Z",
+    "price": 116.89
+  },
+  {
+    "id": "59",
+    "flightNumber": "UN803",
+    "airline": "United Airlines",
+    "origin": "CDG",
+    "destination": "ATL",
+    "departure": "2025-06-15T10:00:00Z",
+    "arrival": "2025-06-15T14:00:00Z",
+    "price": 491.13
+  },
+  {
+    "id": "60",
+    "flightNumber": "BR640",
+    "airline": "British Airways",
+    "origin": "DXB",
+    "destination": "AMS",
+    "departure": "2025-06-18T01:00:00Z",
+    "arrival": "2025-06-18T09:00:00Z",
+    "price": 264.41
+  },
+  {
+    "id": "61",
+    "flightNumber": "AI437",
+    "airline": "Air France",
+    "origin": "LAX",
+    "destination": "ORD",
+    "departure": "2025-06-12T09:00:00Z",
+    "arrival": "2025-06-12T10:00:00Z",
+    "price": 157.23
+  },
+  {
+    "id": "62",
+    "flightNumber": "AI196",
+    "airline": "Air France",
+    "origin": "LAS",
+    "destination": "MEL",
+    "departure": "2025-06-11T07:00:00Z",
+    "arrival": "2025-06-11T18:00:00Z",
+    "price": 667.57
+  },
+  {
+    "id": "63",
+    "flightNumber": "QA788",
+    "airline": "Qantas",
+    "origin": "LAS",
+    "destination": "AMS",
+    "departure": "2025-06-12T05:00:00Z",
+    "arrival": "2025-06-12T14:00:00Z",
+    "price": 495.52
+  },
+  {
+    "id": "64",
+    "flightNumber": "UN263",
+    "airline": "United Airlines",
+    "origin": "DXB",
+    "destination": "MAD",
+    "departure": "2025-06-11T01:00:00Z",
+    "arrival": "2025-06-11T08:00:00Z",
+    "price": 232.59
+  },
+  {
+    "id": "65",
+    "flightNumber": "QA201",
+    "airline": "Qantas",
+    "origin": "LHR",
+    "destination": "MAD",
+    "departure": "2025-06-14T13:00:00Z",
+    "arrival": "2025-06-14T19:00:00Z",
+    "price": 565.61
+  },
+  {
+    "id": "66",
+    "flightNumber": "QA201",
+    "airline": "Qantas",
+    "origin": "LAS",
+    "destination": "LAX",
+    "departure": "2025-06-11T22:00:00Z",
+    "arrival": "2025-06-12T04:00:00Z",
+    "price": 178.08
+  },
+  {
+    "id": "67",
+    "flightNumber": "AI767",
+    "airline": "Air France",
+    "origin": "MAD",
+    "destination": "LAX",
+    "departure": "2025-06-11T20:00:00Z",
+    "arrival": "2025-06-12T04:00:00Z",
+    "price": 619.01
+  },
+  {
+    "id": "68",
+    "flightNumber": "DE231",
+    "airline": "Delta Air Lines",
+    "origin": "SYD",
+    "destination": "SEA",
+    "departure": "2025-06-14T22:00:00Z",
+    "arrival": "2025-06-15T03:00:00Z",
+    "price": 617.9
+  },
+  {
+    "id": "69",
+    "flightNumber": "UN521",
+    "airline": "United Airlines",
+    "origin": "SFO",
+    "destination": "ATL",
+    "departure": "2025-06-20T01:00:00Z",
+    "arrival": "2025-06-20T11:00:00Z",
+    "price": 361.34
+  },
+  {
+    "id": "70",
+    "flightNumber": "LU711",
+    "airline": "Lufthansa",
+    "origin": "LAX",
+    "destination": "SFO",
+    "departure": "2025-06-15T15:00:00Z",
+    "arrival": "2025-06-15T23:00:00Z",
+    "price": 111.66
+  },
+  {
+    "id": "71",
+    "flightNumber": "LU630",
+    "airline": "Lufthansa",
+    "origin": "FRA",
+    "destination": "MEL",
+    "departure": "2025-06-13T11:00:00Z",
+    "arrival": "2025-06-13T13:00:00Z",
+    "price": 375.95
+  },
+  {
+    "id": "72",
+    "flightNumber": "SO711",
+    "airline": "Southwest Airlines",
+    "origin": "LHR",
+    "destination": "MAD",
+    "departure": "2025-06-10T23:00:00Z",
+    "arrival": "2025-06-11T10:00:00Z",
+    "price": 421.7
+  },
+  {
+    "id": "73",
+    "flightNumber": "DE616",
+    "airline": "Delta Air Lines",
+    "origin": "LHR",
+    "destination": "LAS",
+    "departure": "2025-06-16T16:00:00Z",
+    "arrival": "2025-06-16T22:00:00Z",
+    "price": 84.98
+  },
+  {
+    "id": "74",
+    "flightNumber": "AI762",
+    "airline": "Air France",
+    "origin": "LAX",
+    "destination": "MEL",
+    "departure": "2025-06-12T03:00:00Z",
+    "arrival": "2025-06-12T15:00:00Z",
+    "price": 382.3
+  },
+  {
+    "id": "75",
+    "flightNumber": "UN375",
+    "airline": "United Airlines",
+    "origin": "SYD",
+    "destination": "LAS",
+    "departure": "2025-06-16T09:00:00Z",
+    "arrival": "2025-06-16T18:00:00Z",
+    "price": 548.86
+  },
+  {
+    "id": "76",
+    "flightNumber": "LU269",
+    "airline": "Lufthansa",
+    "origin": "MAD",
+    "destination": "CDG",
+    "departure": "2025-06-17T19:00:00Z",
+    "arrival": "2025-06-18T07:00:00Z",
+    "price": 670.55
+  },
+  {
+    "id": "77",
+    "flightNumber": "SO720",
+    "airline": "Southwest Airlines",
+    "origin": "SEA",
+    "destination": "LHR",
+    "departure": "2025-06-10T17:00:00Z",
+    "arrival": "2025-06-10T23:00:00Z",
+    "price": 182.22
+  },
+  {
+    "id": "78",
+    "flightNumber": "LU713",
+    "airline": "Lufthansa",
+    "origin": "AMS",
+    "destination": "MAD",
+    "departure": "2025-06-11T15:00:00Z",
+    "arrival": "2025-06-11T23:00:00Z",
+    "price": 286.55
+  },
+  {
+    "id": "79",
+    "flightNumber": "DE957",
+    "airline": "Delta Air Lines",
+    "origin": "ORD",
+    "destination": "MAD",
+    "departure": "2025-06-17T08:00:00Z",
+    "arrival": "2025-06-17T14:00:00Z",
+    "price": 119.35
+  },
+  {
+    "id": "80",
+    "flightNumber": "EM278",
+    "airline": "Emirates",
+    "origin": "AMS",
+    "destination": "MEL",
+    "departure": "2025-06-14T12:00:00Z",
+    "arrival": "2025-06-14T23:00:00Z",
+    "price": 116.28
+  },
+  {
+    "id": "81",
+    "flightNumber": "UN575",
+    "airline": "United Airlines",
+    "origin": "DXB",
+    "destination": "CDG",
+    "departure": "2025-06-19T23:00:00Z",
+    "arrival": "2025-06-20T03:00:00Z",
+    "price": 204.92
+  },
+  {
+    "id": "82",
+    "flightNumber": "KL472",
+    "airline": "KLM",
+    "origin": "CDG",
+    "destination": "AMS",
+    "departure": "2025-06-16T13:00:00Z",
+    "arrival": "2025-06-16T15:00:00Z",
+    "price": 277.98
+  },
+  {
+    "id": "83",
+    "flightNumber": "AI647",
+    "airline": "Air France",
+    "origin": "LAX",
+    "destination": "SFO",
+    "departure": "2025-06-12T23:00:00Z",
+    "arrival": "2025-06-13T10:00:00Z",
+    "price": 216.5
+  },
+  {
+    "id": "84",
+    "flightNumber": "DE452",
+    "airline": "Delta Air Lines",
+    "origin": "AMS",
+    "destination": "SFO",
+    "departure": "2025-06-18T15:00:00Z",
+    "arrival": "2025-06-18T23:00:00Z",
+    "price": 605.55
+  },
+  {
+    "id": "85",
+    "flightNumber": "KL194",
+    "airline": "KLM",
+    "origin": "DXB",
+    "destination": "FRA",
+    "departure": "2025-06-16T12:00:00Z",
+    "arrival": "2025-06-16T18:00:00Z",
+    "price": 656.77
+  },
+  {
+    "id": "86",
+    "flightNumber": "KL498",
+    "airline": "KLM",
+    "origin": "SFO",
+    "destination": "SEA",
+    "departure": "2025-06-11T00:00:00Z",
+    "arrival": "2025-06-11T03:00:00Z",
+    "price": 88.16
+  },
+  {
+    "id": "87",
+    "flightNumber": "QA847",
+    "airline": "Qantas",
+    "origin": "LAX",
+    "destination": "MEL",
+    "departure": "2025-06-12T13:00:00Z",
+    "arrival": "2025-06-12T14:00:00Z",
+    "price": 607.24
+  },
+  {
+    "id": "88",
+    "flightNumber": "BR419",
+    "airline": "British Airways",
+    "origin": "FRA",
+    "destination": "LAS",
+    "departure": "2025-06-15T23:00:00Z",
+    "arrival": "2025-06-16T00:00:00Z",
+    "price": 276.77
+  },
+  {
+    "id": "89",
+    "flightNumber": "AI783",
+    "airline": "Air France",
+    "origin": "SYD",
+    "destination": "MEL",
+    "departure": "2025-06-17T00:00:00Z",
+    "arrival": "2025-06-17T07:00:00Z",
+    "price": 385.85
+  },
+  {
+    "id": "90",
+    "flightNumber": "QA445",
+    "airline": "Qantas",
+    "origin": "FRA",
+    "destination": "SFO",
+    "departure": "2025-06-17T01:00:00Z",
+    "arrival": "2025-06-17T13:00:00Z",
+    "price": 400.11
+  },
+  {
+    "id": "91",
+    "flightNumber": "EM494",
+    "airline": "Emirates",
+    "origin": "MAD",
+    "destination": "FRA",
+    "departure": "2025-06-19T12:00:00Z",
+    "arrival": "2025-06-19T21:00:00Z",
+    "price": 93.22
+  },
+  {
+    "id": "92",
+    "flightNumber": "UN132",
+    "airline": "United Airlines",
+    "origin": "MAD",
+    "destination": "SEA",
+    "departure": "2025-06-18T00:00:00Z",
+    "arrival": "2025-06-18T08:00:00Z",
+    "price": 466.2
+  },
+  {
+    "id": "93",
+    "flightNumber": "LU631",
+    "airline": "Lufthansa",
+    "origin": "LAS",
+    "destination": "CDG",
+    "departure": "2025-06-11T06:00:00Z",
+    "arrival": "2025-06-11T10:00:00Z",
+    "price": 341.98
+  },
+  {
+    "id": "94",
+    "flightNumber": "KL673",
+    "airline": "KLM",
+    "origin": "ORD",
+    "destination": "LAX",
+    "departure": "2025-06-13T07:00:00Z",
+    "arrival": "2025-06-13T15:00:00Z",
+    "price": 212.86
+  },
+  {
+    "id": "95",
+    "flightNumber": "AM428",
+    "airline": "American Airlines",
+    "origin": "SYD",
+    "destination": "LAX",
+    "departure": "2025-06-12T21:00:00Z",
+    "arrival": "2025-06-13T01:00:00Z",
+    "price": 278.94
+  },
+  {
+    "id": "96",
+    "flightNumber": "BR666",
+    "airline": "British Airways",
+    "origin": "CDG",
+    "destination": "LAS",
+    "departure": "2025-06-13T21:00:00Z",
+    "arrival": "2025-06-14T04:00:00Z",
+    "price": 564.99
+  },
+  {
+    "id": "97",
+    "flightNumber": "AM688",
+    "airline": "American Airlines",
+    "origin": "FRA",
+    "destination": "SYD",
+    "departure": "2025-06-16T13:00:00Z",
+    "arrival": "2025-06-16T17:00:00Z",
+    "price": 231.58
+  },
+  {
+    "id": "98",
+    "flightNumber": "SO154",
+    "airline": "Southwest Airlines",
+    "origin": "LHR",
+    "destination": "SFO",
+    "departure": "2025-06-12T18:00:00Z",
+    "arrival": "2025-06-13T04:00:00Z",
+    "price": 662.53
+  },
+  {
+    "id": "99",
+    "flightNumber": "AM227",
+    "airline": "American Airlines",
+    "origin": "AMS",
+    "destination": "FRA",
+    "departure": "2025-06-13T10:00:00Z",
+    "arrival": "2025-06-13T11:00:00Z",
+    "price": 493.4
+  },
+  {
+    "id": "100",
+    "flightNumber": "AM790",
+    "airline": "American Airlines",
+    "origin": "ATL",
+    "destination": "FRA",
+    "departure": "2025-06-19T13:00:00Z",
+    "arrival": "2025-06-19T21:00:00Z",
+    "price": 562.46
+  }
+]
