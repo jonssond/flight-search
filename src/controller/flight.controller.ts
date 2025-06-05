@@ -23,9 +23,6 @@ export class FlightController {
             const sortBy = req.query.sortBy as string;
             const sortOrder = req.query.sortOrder as 'asc' | 'desc';
 
-            console.log("FILTERS: (flight.controller.ts)", filters);
-            console.log("SORT: (flight.controller.ts)", { sortBy, sortOrder });
-
             const serviceResult = await this.flightService.getAll(page, limit, filters, sortBy, sortOrder);
             
             res.json({
