@@ -51,9 +51,6 @@ export class FlightService {
             };
         }
 
-        console.log("CONDIÇÃO WHERE: (flight.service.ts)", whereCondition);
-        console.log("SORT CONFIG: (flight.service.ts)", { sortBy, sortOrder });
-
         return await this.flightRepository.getAllWithFilters(whereCondition, skip, limit, sortBy, sortOrder);
     }
 }
