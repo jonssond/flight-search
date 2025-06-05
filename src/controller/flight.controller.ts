@@ -20,21 +20,25 @@ export class FlightController {
                 arrivalDate: req.query.arrivalDate as string,
             };
 
-            console.log("FILTERS: (flight.controller.ts)", filters);
+            const sortBy = req.query.sortBy as string;
+            const sortOrder = req.query.sortOrder as 'asc' | 'desc';
 
-            const serviceResult = await this.flightService.getAll(page, limit, filters);
+            console.log("FILTERS: (flight.controller.ts)", filters);
+            console.log("SORT: (flight.controller.ts)", { sortBy, sortOrder });
+
+            const serviceResult = await this.flightService.getAll(page, limit, filters, sortBy, sortOrder);
             
             res.json({
                 flights: serviceResult.flights,
                 meta: {
-                currentPage: page,
-                totalPages: Math.ceil(serviceResult.total / limit),
-                totalItems: serviceResult.total,
-                itemsPerPage: limit,
+                    currentPage: page,
+                    totalPages: Math.ceil(serviceResult.total / limit),
+                    totalItems: serviceResult.total,
+                    itemsPerPage: limit,
                 },
             });
-            } catch (error) {
+        } catch (error) {
             res.status(500).json({ error: 'Internal server error' });
-            }
+        }
     }
 }
