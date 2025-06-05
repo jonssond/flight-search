@@ -54,9 +54,7 @@ export class FlightRepository {
             });
         }
         
-        // Handle sorting
         if (sortBy && sortOrder) {
-            // Map frontend field names to database column names
             const columnMapping: { [key: string]: string } = {
                 'flightNumber': 'flight_number',
                 'airline': 'airline',
@@ -70,7 +68,6 @@ export class FlightRepository {
             const dbColumn = columnMapping[sortBy] || sortBy;
             queryBuilder.orderBy(`flight.${dbColumn}`, sortOrder.toUpperCase() as 'ASC' | 'DESC');
         } else {
-            // Default sorting by departure
             queryBuilder.orderBy('flight.departure', 'ASC');
         }
         
@@ -81,7 +78,6 @@ export class FlightRepository {
             queryBuilder.getCount()
         ]);
         
-        console.log(`FLIGHTS FOUND: ${flights.length} (FlightRepository.ts)`);
         return { flights, total };
     }
 }
