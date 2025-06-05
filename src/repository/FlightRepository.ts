@@ -25,4 +25,46 @@ export class FlightRepository {
 
         return { data, total };
     }
+
+async getAllWithFilters(whereCondition: any, skip: number, limit: number) {
+    const queryBuilder = this.repository.createQueryBuilder('flight');
+    
+    if (whereCondition.origin?.contains) {
+        queryBuilder.andWhere('LOWER(flight.origin) LIKE LOWER(:origin)', {
+            origin: `%${whereCondition.origin.contains}%`
+        });
+    }
+    
+    if (whereCondition.destination?.contains) {
+        queryBuilder.andWhere('LOWER(flight.destination) LIKE LOWER(:destination)', {
+            destination: `%${whereCondition.destination.contains}%`
+        });
+    }
+    
+    if (whereCondition.departure?.gte && whereCondition.departure?.lte) {
+        queryBuilder.andWhere('flight.departure BETWEEN :departureStart AND :departureEnd', {
+            departureStart: whereCondition.departure.gte,
+            departureEnd: whereCondition.departure.lte
+        });
+    }
+    
+    if (whereCondition.arrival?.gte && whereCondition.arrival?.lte) {
+        queryBuilder.andWhere('flight.arrival BETWEEN :arrivalStart AND :arrivalEnd', {
+            arrivalStart: whereCondition.arrival.gte,
+            arrivalEnd: whereCondition.arrival.lte
+        });
+    }
+    
+    queryBuilder.orderBy('flight.departure', 'ASC')
+               .skip(skip)
+               .take(limit);
+    
+    const [flights, total] = await Promise.all([
+        queryBuilder.getMany(),
+        queryBuilder.getCount()
+    ]);
+    
+    console.log("FLIGHTS: (FlightRepository.ts)", flights);
+    return { flights, total };
+}
 }
