@@ -31,27 +31,25 @@ export class FlightService {
     }
     
     if (filters.departureDate) {
-      const startOfDay = new Date(filters.departureDate);
-      startOfDay.setHours(0, 0, 0, 0);
-      const endOfDay = new Date(filters.departureDate);
-      endOfDay.setHours(23, 59, 59, 999);
+      const dateStr = filters.departureDate;
+      const startOfDay = new Date(`${dateStr}T00:00:00.000Z`);
+      const endOfDay = new Date(`${dateStr}T23:59:59.999Z`);
       
       whereCondition.departure = {
-        gte: startOfDay,
-        lte: endOfDay,
+          gte: startOfDay,
+          lte: endOfDay,
       };
     }
     
     if (filters.arrivalDate) {
-      const startOfDay = new Date(filters.arrivalDate);
-      startOfDay.setHours(0, 0, 0, 0);
-      const endOfDay = new Date(filters.arrivalDate);
-      endOfDay.setHours(23, 59, 59, 999);
-      
-      whereCondition.arrival = {
-        gte: startOfDay,
-        lte: endOfDay,
-      };
+        const dateStr = filters.arrivalDate;
+        const startOfDay = new Date(`${dateStr}T00:00:00.000Z`);
+        const endOfDay = new Date(`${dateStr}T23:59:59.999Z`);
+        
+        whereCondition.arrival = {
+            gte: startOfDay,
+            lte: endOfDay,
+        };
     }
 
     console.log("CONDIÇÃO WHERE: (flight.service.ts)", whereCondition);
