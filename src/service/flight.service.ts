@@ -1,10 +1,60 @@
-import { Flight } from "../entity/flight.entity"; 
-import { AppDataSource } from "../config/database/data-source";
+// src/service/flight.service.ts
+import { Flight } from "../entity/flight.entity";
+import { FlightRepository } from "../repository/FlightRepository";
+
+export interface PaginatedFlightServiceResponse {
+    flights: Flight[];
+    currentPage: number;
+    totalPages: number;
+    totalItems: number;
+    itemsPerPage: number;
+}
 
 export class FlightService {
-    private flightRepository = AppDataSource.getRepository(Flight);
+    private flightRepository: FlightRepository;
 
-    async getAll(): Promise<Flight[]> {
-        return this.flightRepository.find();
+    constructor() {
+        this.flightRepository = new FlightRepository();
     }
+
+    async getAll(page: number, limit: number, filters: any) {
+    const skip = (page - 1) * limit;
+    
+    const whereCondition: any = {};
+    
+    if (filters.origin) {
+      whereCondition.origin = { contains: filters.origin, mode: 'insensitive' };
+    }
+    
+    if (filters.destination) {
+      whereCondition.destination = { contains: filters.destination, mode: 'insensitive' };
+    }
+    
+    if (filters.departureDate) {
+      const dateStr = filters.departureDate;
+      const startOfDay = new Date(`${dateStr}T00:00:00.000Z`);
+      const endOfDay = new Date(`${dateStr}T23:59:59.999Z`);
+      
+      whereCondition.departure = {
+          gte: startOfDay,
+          lte: endOfDay,
+      };
+    }
+    
+    if (filters.arrivalDate) {
+        const dateStr = filters.arrivalDate;
+        const startOfDay = new Date(`${dateStr}T00:00:00.000Z`);
+        const endOfDay = new Date(`${dateStr}T23:59:59.999Z`);
+        
+        whereCondition.arrival = {
+            gte: startOfDay,
+            lte: endOfDay,
+        };
+    }
+
+    console.log("CONDIÇÃO WHERE: (flight.service.ts)", whereCondition);
+
+    return await this.flightRepository.getAllWithFilters(whereCondition, skip, limit);
+
+  }
 }
