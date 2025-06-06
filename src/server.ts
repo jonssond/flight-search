@@ -1,5 +1,5 @@
 import 'reflect-metadata';
-import express, { Application, Request, Response } from 'express';
+import express, { Application } from 'express';
 import { AppDataSource } from './config/database/data-source';
 import flightsRouter from './route/flight.route';
 import cors from 'cors';
