@@ -1,4 +1,4 @@
-import { Repository } from "typeorm";
+import { Repository, SelectQueryBuilder } from "typeorm";
 import { Flight } from "../entity/flight.entity";
 import { AppDataSource } from "../config/database/data-source";
 
@@ -7,8 +7,16 @@ export interface PaginatedFlightsResult {
     total: number;
 }
 
+export interface FlightFilterConditions {
+    origin?: { contains: string };
+    destination?: { contains: string };
+    departure?: { gte: Date; lte: Date };
+    arrival?: { gte: Date; lte: Date };
+}
+
 export class FlightRepository {
     private repository: Repository<Flight>;
+    private static readonly DEFAULT_SORT = { column: 'departure', order: 'ASC' as const };
 
     constructor() {
         this.repository = AppDataSource.getRepository(Flight);
@@ -25,59 +33,83 @@ export class FlightRepository {
         return { data, total };
     }
 
-    async getAllWithFilters(whereCondition: any, skip: number, limit: number, sortBy?: string, sortOrder?: 'asc' | 'desc') {
-        const queryBuilder = this.repository.createQueryBuilder('flight');
-        
-        if (whereCondition.origin?.contains) {
-            queryBuilder.andWhere('LOWER(flight.origin) LIKE LOWER(:origin)', {
-                origin: `%${whereCondition.origin.contains}%`
+    async getAllWithFilters(
+            filters: FlightFilterConditions,
+            skip: number,
+            limit: number,
+            sortBy?: string,
+            sortOrder?: 'asc' | 'desc'
+        ) {
+            const queryBuilder = this.repository.createQueryBuilder('flight');
+
+            this.applyFilters(queryBuilder, filters);
+            this.applySorting(queryBuilder, sortBy, sortOrder);
+
+            const [flights, total] = await queryBuilder
+                .skip(skip)
+                .take(limit)
+                .getManyAndCount();
+
+            return { flights, total };
+        }
+
+    private applyFilters(queryBuilder: SelectQueryBuilder<Flight>, filters: FlightFilterConditions): void {
+        this.addStringContainsFilter(queryBuilder, 'origin', filters.origin?.contains);
+        this.addStringContainsFilter(queryBuilder, 'destination', filters.destination?.contains);
+        this.addDateBetweenFilter(queryBuilder, 'departure', filters.departure);
+        this.addDateBetweenFilter(queryBuilder, 'arrival', filters.arrival);
+    }
+
+    private addStringContainsFilter(
+        queryBuilder: SelectQueryBuilder<Flight>,
+        field: 'origin' | 'destination', 
+        value?: string
+    ): void {
+        if (value) {
+            queryBuilder.andWhere(`LOWER(flight.${field}) LIKE LOWER(:${field})`, {
+                [field]: `%${value}%`
             });
         }
-        
-        if (whereCondition.destination?.contains) {
-            queryBuilder.andWhere('LOWER(flight.destination) LIKE LOWER(:destination)', {
-                destination: `%${whereCondition.destination.contains}%`
+    }
+
+    private addDateBetweenFilter(
+        queryBuilder: SelectQueryBuilder<Flight>,
+        field: 'departure' | 'arrival',
+        range?: { gte: Date; lte: Date }
+    ): void {
+        if (range?.gte && range?.lte) {
+            queryBuilder.andWhere(`flight.${field} BETWEEN :${field}Start AND :${field}End`, {
+                [`${field}Start`]: range.gte,
+                [`${field}End`]: range.lte
             });
         }
-        
-        if (whereCondition.departure?.gte && whereCondition.departure?.lte) {
-            queryBuilder.andWhere('flight.departure BETWEEN :departureStart AND :departureEnd', {
-                departureStart: whereCondition.departure.gte,
-                departureEnd: whereCondition.departure.lte
-            });
-        }
-        
-        if (whereCondition.arrival?.gte && whereCondition.arrival?.lte) {
-            queryBuilder.andWhere('flight.arrival BETWEEN :arrivalStart AND :arrivalEnd', {
-                arrivalStart: whereCondition.arrival.gte,
-                arrivalEnd: whereCondition.arrival.lte
-            });
-        }
-        
-        if (sortBy && sortOrder) {
-            const columnMapping: { [key: string]: string } = {
-                'flightNumber': 'flight_number',
-                'airline': 'airline',
-                'origin': 'origin',
-                'destination': 'destination',
-                'departure': 'departure',
-                'arrival': 'arrival',
-                'price': 'price'
-            };
-            
-            const dbColumn = columnMapping[sortBy] || sortBy;
-            queryBuilder.orderBy(`flight.${dbColumn}`, sortOrder.toUpperCase() as 'ASC' | 'DESC');
+    }
+
+    private applySorting(
+        queryBuilder: SelectQueryBuilder<Flight>,
+        sortBy?: string,
+        sortOrder?: 'asc' | 'desc'
+    ): void {
+        const defaultSortColumn = 'departure';
+        const effectiveSortBy = sortBy || defaultSortColumn;
+        const effectiveSortOrder = sortOrder?.toUpperCase() as 'ASC' | 'DESC' || 'ASC';
+
+        const sortableColumns: { [key: string]: string } = {
+            flightNumber: 'flight_number',
+            airline: 'airline',
+            origin: 'origin',
+            destination: 'destination',
+            departure: 'departure',
+            arrival: 'arrival',
+            price: 'price'
+        };
+
+        const dbColumn = sortableColumns[effectiveSortBy];
+
+        if (dbColumn) {
+            queryBuilder.orderBy(`flight.${dbColumn}`, effectiveSortOrder);
         } else {
-            queryBuilder.orderBy('flight.departure', 'ASC');
+            queryBuilder.orderBy(`flight.${defaultSortColumn}`, 'ASC');
         }
-        
-        queryBuilder.skip(skip).take(limit);
-        
-        const [flights, total] = await Promise.all([
-            queryBuilder.getMany(),
-            queryBuilder.getCount()
-        ]);
-        
-        return { flights, total };
     }
 }
